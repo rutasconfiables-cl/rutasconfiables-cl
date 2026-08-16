@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import MetaPixel from "@/components/MetaPixel";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -36,6 +37,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <MetaPixel/>
+        <noscript><img height="1" width="1" style={{display:"none"}} src="https://www.facebook.com/tr?id=1535704924960344&ev=PageView&noscript=1" alt=""/></noscript>
         <nav className="global-language-switcher" aria-label="Seleccionar idioma">
           <Link href="/?lang=es" hrefLang="es" title="Español" aria-label="Español"><img src="https://flagcdn.com/w40/cl.png" alt="" aria-hidden="true" /></Link>
           <Link href="/pt?lang=pt" hrefLang="pt-BR" title="Português" aria-label="Português"><img src="https://flagcdn.com/w40/br.png" alt="" aria-hidden="true" /></Link>
