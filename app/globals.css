@@ -69,3 +69,16 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
   .menu-panel{top:82px;max-height:calc(100vh - 82px)}
   .menu-dropdown{grid-template-columns:1fr}
 }
+
+/* Interacciones del menú en escritorio */
+@media(min-width:851px){
+  .menu-group summary{position:relative;border-radius:7px;transition:color .2s ease,background-color .2s ease,transform .2s ease}
+  .menu-group summary:after{content:"";position:absolute;left:50%;right:50%;bottom:5px;height:2px;border-radius:2px;background:#72b8ff;transition:left .22s ease,right .22s ease}
+  .menu-group summary:hover,.menu-group summary:focus-visible,.menu-group[open] summary{color:#a9d5ff;background:rgba(255,255,255,.07);transform:translateY(-2px);outline:none}
+  .menu-group summary:hover:after,.menu-group summary:focus-visible:after,.menu-group[open] summary:after{left:8px;right:8px}
+  .menu-group[open] .menu-dropdown{transform-origin:top center;animation:menu-reveal .2s ease-out both}
+  .menu-dropdown a{transition:color .18s ease,background-color .18s ease,transform .18s ease,padding-left .18s ease}
+  .menu-dropdown a:hover,.menu-dropdown a:focus-visible{transform:translateX(4px);padding-left:15px;box-shadow:inset 3px 0 #1876cf}
+}
+@keyframes menu-reveal{from{opacity:0;transform:translateX(-50%) translateY(-7px) scale(.98)}to{opacity:1;transform:translateX(-50%) translateY(0) scale(1)}}
+@media(prefers-reduced-motion:reduce){.menu-group summary,.menu-group summary:after,.menu-dropdown a{transition:none}.menu-group[open] .menu-dropdown{animation:none}}
