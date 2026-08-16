@@ -70,6 +70,24 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
   .menu-dropdown{grid-template-columns:1fr}
 }
 
+/* Encabezado móvil limpio: marca, idiomas y menú */
+.mobile-menu-quote{display:none}
+@media(max-width:850px){
+  .hero nav .nav-links{display:none}
+  .hero nav .main-menu{margin-left:auto;margin-right:0}
+  body:has(.hero) .global-language-switcher{top:25px!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important}
+  .mobile-menu-quote{display:flex;align-items:center;justify-content:space-between;gap:18px;margin-top:16px;padding:15px 17px;border-radius:9px;background:#fff;color:#061c4e;font-size:15px;font-weight:900;box-shadow:0 9px 22px rgba(0,10,35,.2)}
+  .mobile-menu-quote span{font-size:20px;font-weight:500}
+}
+@media(max-width:600px){
+  main .hero nav{padding-left:16px;padding-right:16px}
+  body:has(.hero) .global-language-switcher{top:26px!important}
+  .global-language-switcher{gap:3px;padding:3px 5px}
+  .global-language-switcher a{width:27px;height:24px}
+  .hero nav .main-menu{margin-right:0}
+  .menu-panel{padding-bottom:18px}
+}
+
 /* Interacciones del menú en escritorio */
 @media(min-width:851px){
   .menu-group summary{position:relative;border-radius:7px;transition:color .2s ease,background-color .2s ease,transform .2s ease}

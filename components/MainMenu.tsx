@@ -17,6 +17,12 @@ const labels = {
   en: { snow: "Snow", wine: "Wineries", beach: "Beach", tours: "Tours", custom: "Custom tours" },
 };
 const menuLabels = { es: "Abrir menú", pt: "Abrir menu", en: "Open menu" };
+const quoteLabels = { es: "Cotizar viaje", pt: "Solicitar orçamento", en: "Request a quote" };
+const whatsappLinks = {
+  es: "https://wa.me/56935709244?text=Hola%2C%20quiero%20cotizar%20un%20viaje",
+  pt: "https://wa.me/56935709244?text=Ol%C3%A1%2C%20quero%20solicitar%20um%20or%C3%A7amento%20de%20viagem",
+  en: "https://wa.me/56935709244?text=Hello%2C%20I%20would%20like%20a%20travel%20quote",
+};
 
 export default function MainMenu({ locale = "es" }: { locale?: Locale }) {
   const menuRef = useRef<HTMLDivElement>(null);
@@ -57,6 +63,10 @@ export default function MainMenu({ locale = "es" }: { locale?: Locale }) {
           <Link key={title} href={`${base}/destinos/${destinationSlug(title)}`} onClick={(event) => { event.currentTarget.closest("details")?.removeAttribute("open"); setMobileOpen(false); }}>{title === "Tours personalizados" ? labels[locale].custom : title}</Link>
         )}</div>
       </details>
-    )}</div>
+    )}
+      <a className="mobile-menu-quote" href={whatsappLinks[locale]} target="_blank" rel="noreferrer" onClick={() => setMobileOpen(false)}>
+        {quoteLabels[locale]} <span aria-hidden="true">→</span>
+      </a>
+    </div>
   </div>;
 }
