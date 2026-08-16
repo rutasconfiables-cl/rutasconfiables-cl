@@ -4,7 +4,7 @@ const vineyard = "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?a
 const coast = "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=900&q=85";
 const highlights = [["❄","Viajes a la nieve","Disfruta los mejores centros de ski con transporte cómodo y seguro."],["♚","Parque Safari","Vive una experiencia inolvidable en el Parque Safari Chile."],["◉","Rutas del vino","Descubre viñedos exclusivos con traslados y opciones con entrada."],["△","Portillo y Laguna","Paisajes únicos en la cordillera y la famosa Laguna del Inca."],["≈","Costa y litoral","Recorre las mejores playas y ciudades costeras de Chile."],["⌁","Cajón del Maipo","Naturaleza, aventura y relajación a pocos kilómetros de Santiago."]];
 const trips = [["Snow Park Farellones",mountain],["Valle Nevado",mountain],["El Colorado",mountain],["La Parva",mountain],["Parque Safari",lion],["Portillo & Laguna del Inca",mountain],["Viña Concha y Toro",vineyard],["Viña Alyan",vineyard],["Viña Vik",vineyard],["Viña Santa Rita",vineyard],["Viña del Mar & Valparaíso",coast],["Algarrobo & Isla Negra",coast],["Cajón del Maipo",mountain],["Embalse del Yeso",mountain],["Termas de Colina",coast],["Tours personalizados",mountain]];
-const whatsapp = "https://wa.me/56900000000?text=Hola%2C%20quiero%20cotizar%20un%20viaje";
+const whatsapp = "https://wa.me/56935709244?text=Hola%2C%20quiero%20cotizar%20un%20viaje";
 
 function Brand(){return <a className="brand" href="#inicio" aria-label="Rutas Confiables, inicio"><span className="brand-mark">RC</span><span><b>RUTAS<br/>CONFIABLES</b><small>TRANSPORTE & TOURS</small></span></a>}
 export default function Home(){return <main>
