@@ -110,19 +110,8 @@ const detailCopy: Record<string, Record<Locale, LocalizedDetail>> = {
     en:{description:"We design a private route around your group's interests, schedule and pace. Viewpoints, food, wineries, coast or mountains can be combined with realistic travel times.",activities:["Build a custom itinerary","Combine destinations, stops and experiences"]}},
 };
 
-const galleryGroups: Record<string, string[]> = {
-  snow:["/destinations/snow-park-farellones.jpg","/destinations/valle-nevado.jpg","/destinations/el-colorado.jpg"],
-  mountain:["/destinations/portillo-laguna-del-inca.webp","/destinations/cajon-del-maipo.jpg","/destinations/embalse-del-yeso.jpg"],
-  thermal:["/destinations/termas-de-colina.jpg","/destinations/cajon-del-maipo.jpg","/destinations/embalse-del-yeso.jpg"],
-  wine:["/destinations/vina-concha-y-toro.jpg","/destinations/vina-alyan.jpg","/destinations/vina-vik.jpg"],
-  coast:["/destinations/vina-del-mar-valparaiso.jpg","/destinations/algarrobo-isla-negra.jpg","/destinations/cajon-del-maipo.jpg"],
-  safari:["/destinations/parque-safari.jpg","/destinations/tours-personalizados.jpg","/destinations/cajon-del-maipo.jpg"],
-};
-
 export function getDestinationDetail(destination: Destination, locale: Locale) {
   const slug = destination.slug;
   const copy = detailCopy[slug]?.[locale] ?? detailCopy[slug]?.es;
-  const group = slug.includes("vina-") && slug !== "vina-del-mar-valparaiso" ? "wine" : slug.includes("valparaiso") || slug.includes("algarrobo") ? "coast" : slug === "parque-safari" || slug === "tours-personalizados" ? "safari" : slug === "termas-de-colina" ? "thermal" : ["snow-park-farellones","valle-nevado","el-colorado","la-parva"].includes(slug) ? "snow" : "mountain";
-  const gallery = [destination.image, ...galleryGroups[group].filter((image) => image !== destination.image)].slice(0,3);
-  return { ...copy, gallery };
+  return { ...copy, gallery: [destination.image] };
 }
