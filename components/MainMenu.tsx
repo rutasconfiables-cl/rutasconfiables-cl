@@ -6,10 +6,10 @@ import { destinationSlug } from "@/lib/destinations";
 
 type Locale = "es" | "pt" | "en";
 const groups = [
-  { key: "snow", items: ["Snow Park Farellones", "Valle Nevado", "El Colorado", "La Parva", "Portillo & Laguna del Inca", "Cajón del Maipo", "Embalse del Yeso", "Termas de Colina"] },
+  { key: "snow", items: ["Snow Park Farellones", "Valle Nevado", "El Colorado", "La Parva", "Portillo & Laguna del Inca", "Termas de Colina"] },
   { key: "wine", items: ["Viña Concha y Toro", "Viña Alyan", "Viña Vik", "Viña Santa Rita"] },
   { key: "beach", items: ["Viña del Mar & Valparaíso", "Algarrobo & Isla Negra"] },
-  { key: "tours", items: ["City Tour Santiago", "Parque Safari", "Tours personalizados"] },
+  { key: "tours", items: ["Cajón del Maipo", "Embalse del Yeso", "City Tour Santiago", "Parque Safari", "Tours personalizados"] },
 ] as const;
 const labels = {
   es: { snow: "Nieve", wine: "Viñas", beach: "Playa", tours: "Tours", custom: "Tours personalizados", city: "City Tour Santiago" },
