@@ -43,6 +43,20 @@ export type Destination = (typeof destinations)[number];
 type Locale = "es" | "pt" | "en";
 type LocalizedDetail = { description: string; activities: string[] };
 
+const destinationGalleries: Record<string, string[]> = {
+  "snow-park-farellones": ["/destinations/snow-park-farellones.jpg", "/destinations/gallery/snow-park-farellones-2.jpg"],
+  "valle-nevado": ["/destinations/valle-nevado.jpg", "/destinations/gallery/valle-nevado-2.jpg"],
+  "la-parva": ["/destinations/la-parva.jpg", "/destinations/gallery/la-parva-2.jpg"],
+  "parque-safari": ["/destinations/parque-safari.jpg", "/destinations/gallery/parque-safari-2.jpg"],
+  "portillo-laguna-del-inca": ["/destinations/portillo-laguna-del-inca.webp", "/destinations/gallery/portillo-laguna-del-inca-2.jpg"],
+  "vina-vik": ["/destinations/vina-vik.jpg", "/destinations/gallery/vina-vik-2.jpg"],
+  "vina-del-mar-valparaiso": ["/destinations/vina-del-mar-valparaiso.jpg", "/destinations/gallery/valparaiso-2.jpg"],
+  "cajon-del-maipo": ["/destinations/cajon-del-maipo.jpg", "/destinations/gallery/embalse-del-yeso-2.jpg"],
+  "embalse-del-yeso": ["/destinations/embalse-del-yeso.jpg", "/destinations/gallery/embalse-del-yeso-2.jpg"],
+  "termas-de-colina": ["/destinations/termas-de-colina.jpg", "/destinations/gallery/termas-de-colina-2.webp"],
+  "tours-personalizados": ["/destinations/tours-personalizados.jpg", "/destinations/cajon-del-maipo.jpg", "/destinations/vina-concha-y-toro.jpg"],
+};
+
 const detailCopy: Record<string, Record<Locale, LocalizedDetail>> = {
   "snow-park-farellones": {
     es:{description:"Parque Farellones es una alternativa familiar para disfrutar la nieve sin necesidad de ser esquiador. Durante la temporada funcionan actividades como tubing, trineos y canopy, sujetas a condiciones de nieve y operación.",activities:["Deslizarse en tubing y trineos","Disfrutar juegos de nieve y vistas de los Andes"]},
@@ -113,5 +127,5 @@ const detailCopy: Record<string, Record<Locale, LocalizedDetail>> = {
 export function getDestinationDetail(destination: Destination, locale: Locale) {
   const slug = destination.slug;
   const copy = detailCopy[slug]?.[locale] ?? detailCopy[slug]?.es;
-  return { ...copy, gallery: [destination.image] };
+  return { ...copy, gallery: destinationGalleries[slug] ?? [destination.image] };
 }
