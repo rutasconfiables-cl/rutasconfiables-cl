@@ -87,6 +87,7 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 
 /* Interacciones del menú en escritorio */
 @media(min-width:851px){
+  .menu-group[open]:before{content:"";position:absolute;z-index:2299;top:calc(100% - 2px);left:-16px;right:-16px;height:14px}
   .menu-group summary{position:relative;border-radius:7px;transition:color .2s ease,background-color .2s ease,transform .2s ease}
   .menu-group summary:after{content:"";position:absolute;left:50%;right:50%;bottom:5px;height:2px;border-radius:2px;background:#72b8ff;transition:left .22s ease,right .22s ease}
   .menu-group summary:hover,.menu-group summary:focus-visible,.menu-group[open] summary{color:#a9d5ff;background:rgba(255,255,255,.07);transform:translateY(-2px);outline:none}
