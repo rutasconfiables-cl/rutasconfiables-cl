@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ArrowLeft, CheckCircle2, MessageCircle } from "lucide-react";
+import { CheckCircle2, MessageCircle } from "lucide-react";
 import { destinations, getDestinationDetail } from "@/lib/destinations";
 import { notFound } from "next/navigation";
 import SiteFooter from "@/components/SiteFooter";
+import DestinationHeader from "@/components/DestinationHeader";
 
 type Props = { params: Promise<{ slug: string }> };
 const whatsapp = "https://wa.me/56935709244?text=";
@@ -26,7 +26,7 @@ export default async function DestinationPage({ params }: Props) {
   const detail = getDestinationDetail(destination, "es");
   const quote = `${whatsapp}${encodeURIComponent(`Hola, quiero cotizar un viaje a ${destination.title}`)}`;
   return <main className="destination-page">
-    <header className="destination-nav"><Link href="/" className="destination-brand"><img src="/favicon.png" alt=""/><span><b>RUTAS CONFIABLES</b><small>TRANSPORTE & TOURS</small></span></Link><div className="destination-actions"><Link className="language-link" href={`/pt/destinos/${slug}`} hrefLang="pt">PT</Link><Link href="/#experiencias" className="back-link"><ArrowLeft size={18}/> Todos los destinos</Link></div></header>
+    <DestinationHeader/>
     <section className="destination-hero" style={{backgroundImage:`linear-gradient(90deg,rgba(0,20,58,.96),rgba(0,25,65,.54),rgba(0,20,58,.1)),url(${destination.image})`}}><div><p>{destination.eyebrow}</p><h1>{destination.title}</h1><span>{detail.description}</span><a href={quote} className="destination-quote" target="_blank" rel="noreferrer"><MessageCircle size={21}/> Cotizar este viaje</a></div></section>
     <section className="destination-info"><div><p className="destination-kicker">Qué puedes hacer</p><h2>Una experiencia propia de {destination.title}.</h2><p>{detail.description}</p></div><aside><h3>Actividades destacadas</h3>{detail.activities.map((activity)=><span key={activity}><CheckCircle2 size={20}/>{activity}</span>)}<span><CheckCircle2 size={20}/>Traslado privado de ida y regreso</span><a href={quote} target="_blank" rel="noreferrer">Consultar disponibilidad →</a></aside></section>
     <section className="destination-gallery"><p className="destination-kicker">Imágenes del destino</p><h2>Conoce la experiencia.</h2><div>{detail.gallery.map((image,index)=><img key={image} src={image} alt={`${destination.title} - vista ${index+1}`} loading="lazy"/>)}</div></section>
