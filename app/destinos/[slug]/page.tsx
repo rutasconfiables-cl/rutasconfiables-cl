@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, CheckCircle2, MessageCircle } from "lucide-react";
 import { destinations } from "@/lib/destinations";
 import { notFound } from "next/navigation";
+import SiteFooter from "@/components/SiteFooter";
 
 type Props = { params: Promise<{ slug: string }> };
 const whatsapp = "https://wa.me/56935709244?text=";
@@ -28,5 +29,6 @@ export default async function DestinationPage({ params }: Props) {
     <section className="destination-hero" style={{backgroundImage:`linear-gradient(90deg,rgba(0,20,58,.96),rgba(0,25,65,.54),rgba(0,20,58,.1)),url(${destination.image})`}}><div><p>{destination.eyebrow}</p><h1>{destination.title}</h1><span>{destination.description}</span><a href={quote} className="destination-quote" target="_blank" rel="noreferrer"><MessageCircle size={21}/> Cotizar este viaje</a></div></section>
     <section className="destination-info"><div><p className="destination-kicker">Una experiencia Rutas Confiables</p><h2>Viaja cómodo, seguro y a tu ritmo.</h2><p>Organizamos cada detalle del traslado para que tú y tu grupo solo tengan que disfrutar. Coordinamos horarios, puntos de recogida y paradas según las características del destino.</p></div><aside><h3>Tu viaje incluye</h3>{destination.benefits.map((benefit)=><span key={benefit}><CheckCircle2 size={20}/>{benefit}</span>)}<a href={quote} target="_blank" rel="noreferrer">Consultar disponibilidad →</a></aside></section>
     <section className="destination-bottom"><h2>¿Listo para conocer {destination.title}?</h2><p>Cuéntanos cuántas personas viajan y la fecha que tienes en mente.</p><a href={quote} target="_blank" rel="noreferrer"><MessageCircle size={22}/> Hablar por WhatsApp</a></section>
+    <SiteFooter/>
   </main>;
 }
