@@ -19,8 +19,9 @@ export const metadata: Metadata = {
   openGraph: { title: "Rutas Confiables", description: "Tu próxima ruta comienza aquí.", images: ["/og.png"] },
   twitter: { card: "summary_large_image", images: ["/og.png"] },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: { url: "/favicon.png", type: "image/png" },
+    shortcut: "/favicon.png",
+    apple: "/favicon.png",
   },
 };
 
