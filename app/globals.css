@@ -87,3 +87,22 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 .destination-page{padding-top:92px}
 .destination-nav{position:fixed;top:0;left:0;right:0;z-index:900;width:100%;box-shadow:0 6px 22px rgba(0,0,0,.18);background:rgba(0,25,68,.97);backdrop-filter:blur(12px)}
 @media(max-width:700px){.destination-page{padding-top:76px}.destination-nav{height:76px}}
+
+/* Distribución profesional del header principal */
+@media(min-width:851px){
+  main .hero nav{display:grid;grid-template-columns:140px minmax(480px,1fr) auto;align-items:center;column-gap:34px;padding-left:max(4vw,32px);padding-right:max(4vw,32px)}
+  .hero nav .brand{justify-self:start}
+  .hero nav .main-menu{justify-self:center;margin:0}
+  .hero nav .menu-panel{gap:clamp(22px,2.4vw,44px)}
+  .hero nav .nav-links{justify-self:end;padding-left:120px}
+  .hero nav .nav-links .button{min-width:260px;min-height:54px}
+  body:has(.hero) .global-language-switcher{top:42px!important;left:auto;right:calc(max(4vw,32px) + 274px)!important;transform:none}
+}
+@media(min-width:851px) and (max-width:1200px){
+  main .hero nav{grid-template-columns:105px minmax(400px,1fr) auto;column-gap:18px;padding-left:24px;padding-right:24px}
+  .hero nav .brand-logo{width:74px;height:74px}
+  .hero nav .menu-panel{gap:16px}
+  .hero nav .nav-links{padding-left:104px}
+  .hero nav .nav-links .button{min-width:218px;padding-left:16px;padding-right:16px}
+  body:has(.hero) .global-language-switcher{right:256px!important}
+}
