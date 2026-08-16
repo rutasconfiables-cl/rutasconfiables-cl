@@ -3,7 +3,24 @@ const lion = "https://images.unsplash.com/photo-1649724264150-50dbfdc606c5?auto=
 const vineyard = "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?auto=format&fit=crop&w=900&q=85";
 const coast = "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=900&q=85";
 const highlights = [{Icon:MountainSnow,title:"Viajes a la nieve",text:"Disfruta los mejores centros de ski con transporte cómodo y seguro."},{Icon:PawPrint,title:"Parque Safari",text:"Vive una experiencia inolvidable en el Parque Safari Chile."},{Icon:Grape,title:"Rutas del vino",text:"Descubre viñedos exclusivos con traslados y opciones con entrada incluida."},{Icon:Mountain,title:"Portillo y Laguna del Inca",text:"Paisajes únicos en la cordillera y la famosa Laguna del Inca."},{Icon:Waves,title:"Costa y litoral",text:"Recorre las mejores playas y ciudades costeras de Chile."},{Icon:Map,title:"Cajón del Maipo",text:"Naturaleza, aventura y relajación a pocos kilómetros de Santiago."}];
-const trips = [{title:"Snow Park Farellones",img:"https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=85",Icon:Snowflake},{title:"Valle Nevado",img:mountain,Icon:MountainSnow},{title:"El Colorado",img:"https://images.unsplash.com/photo-1529669851596-ba9a5549af95?auto=format&fit=crop&w=900&q=85",Icon:CableCar},{title:"La Parva",img:"https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=85",Icon:Mountain},{title:"Parque Safari",img:lion,Icon:PawPrint},{title:"Portillo & Laguna del Inca",img:mountain,Icon:MountainSnow},{title:"Viña Concha y Toro",img:vineyard,Icon:Grape},{title:"Viña Alyan",img:vineyard,Icon:Grape},{title:"Viña Vik",img:vineyard,Icon:Grape},{title:"Viña Santa Rita",img:vineyard,Icon:Grape},{title:"Viña del Mar & Valparaíso",img:coast,Icon:Waves},{title:"Algarrobo & Isla Negra",img:coast,Icon:Waves},{title:"Cajón del Maipo",img:mountain,Icon:Map},{title:"Embalse del Yeso",img:"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85",Icon:Mountain},{title:"Termas de Colina",img:"https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85",Icon:Waves},{title:"Tours personalizados",img:mountain,Icon:Compass}];
+const trips = [
+  {title:"Snow Park Farellones",img:"https://images.unsplash.com/photo-1551524559-8af4e6624178?auto=format&fit=crop&w=900&q=85"},
+  {title:"Valle Nevado",img:mountain},
+  {title:"El Colorado",img:"https://images.unsplash.com/photo-1529669851596-ba9a5549af95?auto=format&fit=crop&w=900&q=85"},
+  {title:"La Parva",img:"https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=85"},
+  {title:"Portillo & Laguna del Inca",img:mountain},
+  {title:"Cajón del Maipo",img:mountain},
+  {title:"Parque Safari",img:lion},
+  {title:"Viña Concha y Toro",img:vineyard},
+  {title:"Viña Alyan",img:vineyard},
+  {title:"Viña Vik",img:vineyard},
+  {title:"Viña Santa Rita",img:vineyard},
+  {title:"Viña del Mar & Valparaíso",img:coast},
+  {title:"Algarrobo & Isla Negra",img:coast},
+  {title:"Embalse del Yeso",img:"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85"},
+  {title:"Termas de Colina",img:"https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85"},
+  {title:"Tours personalizados",img:mountain}
+];
 const whatsapp = "https://wa.me/56935709244?text=Hola%2C%20quiero%20cotizar%20un%20viaje";
 
 function Brand(){return <a className="brand" href="#inicio" aria-label="Rutas Confiables, inicio"><img className="brand-logo" src="/favicon.png" alt="Logo oficial de Rutas Confiables"/></a>}
@@ -16,7 +33,7 @@ export default function Home(){return <main>
   <section className="cta"><div><b>¿Dónde quieres ir?</b><span>Nosotros te llevamos.</span></div><a className="button light" href={whatsapp}>◉ Cotizar por WhatsApp →</a></section><SiteFooter/>
   <a className="whatsapp-float" href={whatsapp} target="_blank" rel="noreferrer" aria-label="Cotizar viaje por WhatsApp al +56 9 3570 9244"><img src="/whatsapp.svg" alt="" aria-hidden="true"/></a>
 </main>}
-import { CableCar, CalendarCheck2, ChevronRight, Compass, Grape, Map, MapPin, Mountain, MountainSnow, PawPrint, Snowflake, Users, Waves } from "lucide-react";
+import { CalendarCheck2, ChevronRight, Grape, Map, MapPin, Mountain, MountainSnow, PawPrint, Users, Waves } from "lucide-react";
 import Link from "next/link";
 import { destinationSlug } from "@/lib/destinations";
 import SiteFooter from "@/components/SiteFooter";
