@@ -35,8 +35,13 @@ export function proxy(request: NextRequest) {
 
   if (request.nextUrl.pathname !== "/") return NextResponse.next();
 
+  const country = request.headers.get("x-vercel-ip-country")?.toUpperCase();
   const savedLocale = request.cookies.get("rc_locale")?.value as Locale | undefined;
-  const locale = savedLocale && ["es", "pt", "en"].includes(savedLocale) ? savedLocale : detectedLocale(request);
+  const locale = country === "BR"
+    ? "pt"
+    : savedLocale && ["es", "pt", "en"].includes(savedLocale)
+      ? savedLocale
+      : detectedLocale(request);
   if (locale === "es") return NextResponse.next();
 
   const destination = request.nextUrl.clone();
