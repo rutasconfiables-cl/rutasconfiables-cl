@@ -37,9 +37,9 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <nav className="global-language-switcher" aria-label="Seleccionar idioma">
-          <Link href="/" hrefLang="es" title="Español" aria-label="Español"><span aria-hidden="true">🇨🇱</span></Link>
-          <Link href="/pt" hrefLang="pt-BR" title="Português" aria-label="Português"><span aria-hidden="true">🇧🇷</span></Link>
-          <Link href="/en" hrefLang="en-US" title="English" aria-label="English"><span aria-hidden="true">🇺🇸</span></Link>
+          <Link href="/" hrefLang="es" title="Español" aria-label="Español"><img src="https://flagcdn.com/w40/cl.png" alt="" aria-hidden="true" /></Link>
+          <Link href="/pt" hrefLang="pt-BR" title="Português" aria-label="Português"><img src="https://flagcdn.com/w40/br.png" alt="" aria-hidden="true" /></Link>
+          <Link href="/en" hrefLang="en-US" title="English" aria-label="English"><img src="https://flagcdn.com/w40/us.png" alt="" aria-hidden="true" /></Link>
         </nav>
         {children}
       </body>
