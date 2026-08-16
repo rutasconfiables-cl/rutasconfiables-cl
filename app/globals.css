@@ -204,6 +204,7 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 }
 
 /* Header sin botón de cotización: marca, navegación e idiomas */
+main .hero>nav,.destination-nav{background:linear-gradient(105deg,rgba(5,39,88,.98) 0%,rgba(8,54,111,.98) 56%,rgba(10,67,132,.98) 100%);border-bottom:1px solid rgba(135,190,255,.22);box-shadow:0 8px 26px rgba(0,18,54,.24);backdrop-filter:blur(12px)}
 @media(min-width:1201px){
   main .hero>nav,.full-destination-nav{grid-template-columns:420px minmax(520px,1fr) 150px}
   main .hero>nav .main-menu,.full-destination-nav .main-menu{margin:0;justify-self:center}

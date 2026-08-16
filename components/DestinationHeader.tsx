@@ -18,6 +18,5 @@ export default function DestinationHeader({ locale = "es" }: { locale?: Locale }
       <span><b>RUTAS CONFIABLES</b><small>{text.label}</small></span>
     </Link>
     <MainMenu locale={locale}/>
-    <div className="nav-links"><a className="button light" href={whatsapp} target="_blank" rel="noreferrer">{text.quote}<span aria-hidden="true">→</span></a></div>
   </header>;
 }
