@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -35,6 +36,11 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <nav className="global-language-switcher" aria-label="Seleccionar idioma">
+          <Link href="/" hrefLang="es" title="Español" aria-label="Español"><span aria-hidden="true">🇨🇱</span></Link>
+          <Link href="/pt" hrefLang="pt-BR" title="Português" aria-label="Português"><span aria-hidden="true">🇧🇷</span></Link>
+          <Link href="/en" hrefLang="en-US" title="English" aria-label="English"><span aria-hidden="true">🇺🇸</span></Link>
+        </nav>
         {children}
       </body>
     </html>
