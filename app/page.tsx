@@ -10,6 +10,8 @@ const trips = [
   {title:"La Parva",img:"https://images.unsplash.com/photo-1454496522488-7a8e488e8606?auto=format&fit=crop&w=900&q=85"},
   {title:"Portillo & Laguna del Inca",img:mountain},
   {title:"Cajón del Maipo",img:mountain},
+  {title:"Embalse del Yeso",img:"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85"},
+  {title:"Termas de Colina",img:"https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85"},
   {title:"Parque Safari",img:lion},
   {title:"Viña Concha y Toro",img:vineyard},
   {title:"Viña Alyan",img:vineyard},
@@ -17,8 +19,6 @@ const trips = [
   {title:"Viña Santa Rita",img:vineyard},
   {title:"Viña del Mar & Valparaíso",img:coast},
   {title:"Algarrobo & Isla Negra",img:coast},
-  {title:"Embalse del Yeso",img:"https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=900&q=85"},
-  {title:"Termas de Colina",img:"https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&w=900&q=85"},
   {title:"Tours personalizados",img:mountain}
 ];
 const whatsapp = "https://wa.me/56935709244?text=Hola%2C%20quiero%20cotizar%20un%20viaje";
