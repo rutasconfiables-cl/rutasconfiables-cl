@@ -202,3 +202,17 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
   body:has(.hero) .global-language-switcher,body:has(.destination-page) .global-language-switcher{top:26px!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important}
   .hero{padding-top:82px}.destination-page{padding-top:82px}
 }
+
+/* Header sin botón de cotización: marca, navegación e idiomas */
+@media(min-width:1201px){
+  main .hero>nav,.full-destination-nav{grid-template-columns:420px minmax(520px,1fr) 150px}
+  main .hero>nav .main-menu,.full-destination-nav .main-menu{margin:0;justify-self:center}
+  main .hero>nav .nav-links,.full-destination-nav .nav-links{display:none!important}
+  body:has(.hero) .global-language-switcher,body:has(.destination-page) .global-language-switcher{right:max(4vw,32px)!important}
+}
+@media(min-width:851px) and (max-width:1200px){
+  main .hero>nav,.full-destination-nav{grid-template-columns:86px minmax(430px,1fr) 120px}
+  main .hero>nav .main-menu,.full-destination-nav .main-menu{margin:0;justify-self:center}
+  main .hero>nav .nav-links,.full-destination-nav .nav-links{display:none!important}
+  body:has(.hero) .global-language-switcher,body:has(.destination-page) .global-language-switcher{right:22px!important}
+}
