@@ -152,6 +152,7 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 
 .destination-gallery>div:has(>img:only-child){display:block;max-width:920px;margin:0 auto}.destination-gallery>div>img:only-child{display:block;width:100%;height:clamp(300px,48vw,560px);min-height:0;object-fit:cover}
 .destination-gallery>div:has(>img:nth-child(2):last-child){grid-template-columns:1fr 1fr;max-width:1100px;margin:0 auto}.destination-gallery>div:has(>img:nth-child(2):last-child) img{height:clamp(260px,34vw,430px);min-height:0}
+@media(max-width:700px){.destination-gallery>div,.destination-gallery>div:has(>img:nth-child(2):last-child){grid-template-columns:1fr;max-width:none}.destination-gallery img,.destination-gallery img:first-child,.destination-gallery>div:has(>img:nth-child(2):last-child) img{grid-column:auto;width:100%;height:clamp(260px,72vw,390px);min-height:0;object-fit:cover}}
 
 /* Header completo en todas las páginas de destinos */
 .destination-page{padding-top:120px}.full-destination-nav{height:120px;display:grid;grid-template-columns:minmax(260px,340px) minmax(420px,1fr) auto;column-gap:30px;padding:0 max(4vw,32px)}.full-destination-nav .destination-brand{justify-self:start}.full-destination-nav .destination-brand img{width:82px;height:82px}.full-destination-nav .main-menu{justify-self:center;margin:24px 0 0}.full-destination-nav .menu-panel{gap:clamp(20px,2.2vw,40px)}.full-destination-nav .nav-links{justify-self:end}.full-destination-nav .nav-links .button{min-width:220px;background:#fff;color:#061c4e}
