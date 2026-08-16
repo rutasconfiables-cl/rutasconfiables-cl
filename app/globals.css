@@ -79,7 +79,7 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 @media(max-width:600px){
   main .hero nav{padding-left:16px;padding-right:16px}
   body:has(.hero) .global-language-switcher{top:26px!important}
-  .global-language-switcher{gap:3px;padding:3px 5px}
+  .global-language-switcher{gap:6px;padding:3px 7px}
   .global-language-switcher a{width:27px;height:24px}
   .hero nav .main-menu{margin-right:0}
   .menu-panel{padding-bottom:18px}
