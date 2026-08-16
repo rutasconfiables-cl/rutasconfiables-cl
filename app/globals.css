@@ -106,7 +106,7 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 
 /* Distribución profesional del header principal */
 @media(min-width:851px){
-  main .hero nav{display:grid;grid-template-columns:140px minmax(480px,1fr) auto;align-items:center;column-gap:34px;padding-left:max(4vw,32px);padding-right:max(4vw,32px)}
+  main .hero nav{display:grid;grid-template-columns:310px minmax(480px,1fr) auto;align-items:center;column-gap:34px;padding-left:max(4vw,32px);padding-right:max(4vw,32px)}
   .hero nav .brand{justify-self:start}
   .hero nav .main-menu{justify-self:center;margin:0}
   .hero nav .menu-panel{gap:clamp(22px,2.4vw,44px)}
@@ -154,3 +154,7 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 .destination-page{padding-top:120px}.full-destination-nav{height:120px;display:grid;grid-template-columns:minmax(260px,340px) minmax(420px,1fr) auto;column-gap:30px;padding:0 max(4vw,32px)}.full-destination-nav .destination-brand{justify-self:start}.full-destination-nav .destination-brand img{width:82px;height:82px}.full-destination-nav .main-menu{justify-self:center;margin:24px 0 0}.full-destination-nav .menu-panel{gap:clamp(20px,2.2vw,40px)}.full-destination-nav .nav-links{justify-self:end}.full-destination-nav .nav-links .button{min-width:220px;background:#fff;color:#061c4e}
 @media(max-width:1100px) and (min-width:851px){.full-destination-nav{grid-template-columns:190px minmax(390px,1fr) auto;column-gap:16px;padding:0 22px}.full-destination-nav .destination-brand span{display:none}.full-destination-nav .nav-links .button{min-width:175px;padding:12px 15px}.full-destination-nav .menu-panel{gap:16px}}
 @media(max-width:850px){.destination-page{padding-top:82px}.full-destination-nav{height:82px;display:flex;padding:0 16px}.full-destination-nav .destination-brand img{width:58px;height:58px}.full-destination-nav .destination-brand span,.full-destination-nav .nav-links{display:none}.full-destination-nav .main-menu{margin:0 0 0 auto;padding:0}.full-destination-nav .menu-panel{gap:0}}
+
+/* Descriptor visible junto al logo */
+.header-brand-tagline{display:block;font-size:15px;line-height:1.2;font-weight:800;letter-spacing:.2px;text-transform:uppercase;white-space:nowrap}.full-destination-nav .destination-brand small{font-size:9px;line-height:1.25;max-width:210px;margin-top:5px}
+@media(max-width:1200px){.header-brand-tagline{display:none}}

@@ -4,9 +4,9 @@ import MainMenu from "@/components/MainMenu";
 type Locale = "es" | "pt" | "en";
 
 const copy = {
-  es: { home: "/", label: "TRANSPORTE & TOURS", quote: "Cotizar viaje", message: "Hola, quiero cotizar un viaje" },
-  pt: { home: "/pt", label: "TRANSPORTE & PASSEIOS", quote: "Solicitar orçamento", message: "Olá, quero solicitar um orçamento de viagem" },
-  en: { home: "/en", label: "TRANSPORTATION & TOURS", quote: "Request a quote", message: "Hello, I would like a travel quote" },
+  es: { home: "/", label: "TRANSPORTE DE PASAJEROS Y TOURS", quote: "Cotizar viaje", message: "Hola, quiero cotizar un viaje" },
+  pt: { home: "/pt", label: "TRANSPORTE DE PASSAGEIROS E PASSEIOS", quote: "Solicitar orçamento", message: "Olá, quero solicitar um orçamento de viagem" },
+  en: { home: "/en", label: "PASSENGER TRANSPORTATION AND TOURS", quote: "Request a quote", message: "Hello, I would like a travel quote" },
 };
 
 export default function DestinationHeader({ locale = "es" }: { locale?: Locale }) {
