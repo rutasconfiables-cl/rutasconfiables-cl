@@ -9,12 +9,12 @@ const groups = [
   { key: "snow", items: ["Snow Park Farellones", "Valle Nevado", "El Colorado", "La Parva", "Portillo & Laguna del Inca", "Cajón del Maipo", "Embalse del Yeso", "Termas de Colina"] },
   { key: "wine", items: ["Viña Concha y Toro", "Viña Alyan", "Viña Vik", "Viña Santa Rita"] },
   { key: "beach", items: ["Viña del Mar & Valparaíso", "Algarrobo & Isla Negra"] },
-  { key: "tours", items: ["Parque Safari", "Tours personalizados"] },
+  { key: "tours", items: ["City Tour Santiago", "Parque Safari", "Tours personalizados"] },
 ] as const;
 const labels = {
-  es: { snow: "Nieve", wine: "Viñas", beach: "Playa", tours: "Tours", custom: "Tours personalizados" },
-  pt: { snow: "Neve", wine: "Vinícolas", beach: "Praia", tours: "Passeios", custom: "Passeios personalizados" },
-  en: { snow: "Snow", wine: "Wineries", beach: "Beach", tours: "Tours", custom: "Custom tours" },
+  es: { snow: "Nieve", wine: "Viñas", beach: "Playa", tours: "Tours", custom: "Tours personalizados", city: "City Tour Santiago" },
+  pt: { snow: "Neve", wine: "Vinícolas", beach: "Praia", tours: "Passeios", custom: "Passeios personalizados", city: "City Tour Santiago" },
+  en: { snow: "Snow", wine: "Wineries", beach: "Beach", tours: "Tours", custom: "Custom tours", city: "Santiago City Tour" },
 };
 const menuLabels = {
   es: { open: "Abrir menú", close: "Cerrar menú" },
@@ -75,7 +75,7 @@ export default function MainMenu({ locale = "es" }: { locale?: Locale }) {
       >
         <summary>{labels[locale][group.key]}</summary>
         <div className="menu-dropdown">{group.items.map((title) =>
-          <Link key={title} href={`${base}/destinos/${destinationSlug(title)}`} onClick={(event) => { event.currentTarget.closest("details")?.removeAttribute("open"); setMobileOpen(false); }}>{title === "Tours personalizados" ? labels[locale].custom : title}</Link>
+          <Link key={title} href={`${base}/destinos/${destinationSlug(title)}`} onClick={(event) => { event.currentTarget.closest("details")?.removeAttribute("open"); setMobileOpen(false); }}>{title === "Tours personalizados" ? labels[locale].custom : title === "City Tour Santiago" ? labels[locale].city : title}</Link>
         )}</div>
       </details>
     )}</div>

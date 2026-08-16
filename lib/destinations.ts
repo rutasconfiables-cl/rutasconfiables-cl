@@ -20,6 +20,7 @@ const base = [
   ["El Colorado", "/destinations/el-colorado.jpg", "Nieve a pasos de Santiago", "Planifica tu día de ski o paseo panorámico con un traslado adaptado a tu grupo."],
   ["La Parva", "/destinations/la-parva.jpg", "Montaña, nieve y vistas únicas", "Llega sin preocupaciones y disfruta una experiencia cordillerana personalizada."],
   ["Parque Safari", "/destinations/parque-safari.jpg", "Una aventura para toda la familia", "Vive una jornada inolvidable en Parque Safari con traslado de ida y regreso."],
+  ["City Tour Santiago", "/destinations/city-tour-santiago.jpg", "Historia, barrios y panorámicas de la capital", "Descubre los principales hitos de Santiago en un recorrido privado y flexible."],
   ["Portillo & Laguna del Inca", "/destinations/portillo-laguna-del-inca.webp", "Postales inolvidables de los Andes", "Conoce Portillo y la Laguna del Inca en un recorrido privado desde Santiago."],
   ["Viña Concha y Toro", "/destinations/vina-concha-y-toro.jpg", "Tradición vitivinícola chilena", "Descubre sus jardines, bodegas e historia con transporte privado coordinado."],
   ["Viña Alyan", "/destinations/vina-alyan.jpg", "Vino y atardecer entre viñedos", "Una experiencia boutique con traslado cómodo para disfrutar sin preocupaciones."],
@@ -48,6 +49,7 @@ const destinationGalleries: Record<string, string[]> = {
   "valle-nevado": ["/destinations/valle-nevado.jpg", "/destinations/gallery/valle-nevado-2.jpg"],
   "la-parva": ["/destinations/la-parva.jpg", "/destinations/gallery/la-parva-2.jpg"],
   "parque-safari": ["/destinations/parque-safari.jpg", "/destinations/gallery/parque-safari-2.jpg"],
+  "city-tour-santiago": ["/destinations/city-tour-santiago.jpg", "/destinations/gallery/city-tour-santiago-2.jpg"],
   "portillo-laguna-del-inca": ["/destinations/portillo-laguna-del-inca.webp", "/destinations/gallery/portillo-laguna-del-inca-2.jpg"],
   "vina-vik": ["/destinations/vina-vik.jpg", "/destinations/gallery/vina-vik-2.jpg"],
   "vina-del-mar-valparaiso": ["/destinations/vina-del-mar-valparaiso.jpg", "/destinations/gallery/valparaiso-2.jpg"],
@@ -118,6 +120,10 @@ const detailCopy: Record<string, Record<Locale, LocalizedDetail>> = {
     es:{description:"Parque Safari Chile, en Rancagua, cuenta con zoológico y experiencias opcionales como safaris de herbívoros, grandes felinos y circuitos temáticos. Los cupos y horarios deben reservarse con anticipación.",activities:["Realizar safaris fotográficos de animales","Disfrutar atracciones y áreas familiares"]},
     pt:{description:"O Parque Safari Chile, em Rancagua, possui zoológico e experiências opcionais como safáris de herbívoros, grandes felinos e circuitos temáticos. Horários devem ser reservados.",activities:["Fazer safáris fotográficos de animais","Aproveitar atrações e áreas familiares"]},
     en:{description:"Parque Safari Chile in Rancagua has a zoo and optional experiences such as herbivore, big-cat and themed safaris. Times and limited spaces should be booked in advance.",activities:["Take photographic wildlife safaris","Enjoy attractions and family areas"]}},
+  "city-tour-santiago": {
+    es:{description:"El City Tour Santiago conecta el centro histórico con sectores representativos de la capital. El recorrido puede incluir la Plaza de Armas y la Catedral Metropolitana, el Palacio de La Moneda, el Cerro Santa Lucía, barrios como Lastarria y Bellavista, y una vista panorámica desde el Cerro San Cristóbal, según horarios y accesos.",activities:["Conocer la Plaza de Armas, La Moneda y el centro histórico","Recorrer barrios patrimoniales y contemplar Santiago desde sus miradores"]},
+    pt:{description:"O City Tour Santiago conecta o centro histórico aos setores mais representativos da capital. O roteiro pode incluir a Plaza de Armas e a Catedral Metropolitana, o Palácio La Moneda, o Cerro Santa Lucía, bairros como Lastarria e Bellavista e uma vista panorâmica do Cerro San Cristóbal, conforme horários e acessos.",activities:["Conhecer a Plaza de Armas, La Moneda e o centro histórico","Visitar bairros históricos e contemplar Santiago de seus mirantes"]},
+    en:{description:"The Santiago City Tour connects the historic center with some of the capital's most representative districts. Depending on opening times and access, the route may include Plaza de Armas and the Metropolitan Cathedral, La Moneda Palace, Santa Lucía Hill, Lastarria and Bellavista, plus panoramic views from San Cristóbal Hill.",activities:["Visit Plaza de Armas, La Moneda and the historic center","Explore heritage neighborhoods and see Santiago from panoramic viewpoints"]}},
   "tours-personalizados": {
     es:{description:"Diseñamos una ruta privada según los intereses, horarios y ritmo del grupo. Se pueden combinar miradores, gastronomía, viñedos, costa o montaña, considerando tiempos reales de traslado.",activities:["Crear un itinerario a medida","Combinar destinos, paradas y experiencias"]},
     pt:{description:"Criamos uma rota privativa conforme interesses, horários e ritmo do grupo. É possível combinar mirantes, gastronomia, vinícolas, litoral ou montanha.",activities:["Criar um roteiro sob medida","Combinar destinos, paradas e experiências"]},
