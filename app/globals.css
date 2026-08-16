@@ -158,3 +158,37 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 /* Descriptor visible junto al logo */
 .header-brand-tagline{display:block;font-size:15px;line-height:1.2;font-weight:800;letter-spacing:.2px;text-transform:uppercase;white-space:nowrap}.full-destination-nav .destination-brand small{font-size:9px;line-height:1.25;max-width:210px;margin-top:5px}
 @media(max-width:1200px){.header-brand-tagline{display:none}}
+
+/* Sistema unificado de header: portada y destinos */
+@media(min-width:1201px){
+  main .hero>nav,.full-destination-nav{height:112px;display:grid;grid-template-columns:320px minmax(440px,1fr) 240px;align-items:center;column-gap:28px;padding:0 max(4vw,32px)}
+  main .hero>nav .brand,.full-destination-nav .destination-brand{justify-self:start;display:flex;align-items:center;gap:16px}
+  main .hero>nav .brand-logo,.full-destination-nav .destination-brand img{width:78px;height:78px;object-fit:contain}
+  .full-destination-nav .destination-brand b{display:none}
+  main .hero>nav .header-brand-tagline,.full-destination-nav .destination-brand small{display:block;margin:0;max-width:none;font-size:14px;line-height:1.22;font-weight:850;letter-spacing:.2px;text-transform:uppercase;white-space:nowrap;color:#fff}
+  main .hero>nav .main-menu,.full-destination-nav .main-menu{justify-self:center;margin:22px 0 0;padding:0}
+  main .hero>nav .menu-panel,.full-destination-nav .menu-panel{gap:clamp(20px,2.1vw,38px)}
+  main .hero>nav .nav-links,.full-destination-nav .nav-links{justify-self:end;display:flex;padding:0}
+  main .hero>nav .nav-links .button,.full-destination-nav .nav-links .button{width:240px;min-width:240px;min-height:54px;padding:14px 20px}
+  body:has(.hero) .global-language-switcher,body:has(.destination-page) .global-language-switcher{top:39px!important;left:auto!important;right:calc(max(4vw,32px) + 254px)!important;transform:none!important}
+  .hero{padding-top:112px}.destination-page{padding-top:112px}
+}
+@media(min-width:851px) and (max-width:1200px){
+  main .hero>nav,.full-destination-nav{height:96px;display:grid;grid-template-columns:86px minmax(390px,1fr) 190px;align-items:center;column-gap:16px;padding:0 22px}
+  main .hero>nav .brand-logo,.full-destination-nav .destination-brand img{width:66px;height:66px}
+  main .hero>nav .header-brand-tagline,.full-destination-nav .destination-brand span{display:none}
+  main .hero>nav .main-menu,.full-destination-nav .main-menu{justify-self:center;margin:20px 0 0;padding:0}
+  main .hero>nav .menu-panel,.full-destination-nav .menu-panel{gap:16px}
+  main .hero>nav .nav-links,.full-destination-nav .nav-links{justify-self:end;padding:0}
+  main .hero>nav .nav-links .button,.full-destination-nav .nav-links .button{width:190px;min-width:190px;min-height:48px;padding:12px 15px;font-size:13px}
+  body:has(.hero) .global-language-switcher,body:has(.destination-page) .global-language-switcher{top:31px!important;left:auto!important;right:226px!important;transform:none!important}
+  .hero{padding-top:96px}.destination-page{padding-top:96px}
+}
+@media(max-width:850px){
+  main .hero>nav,.full-destination-nav{height:82px;display:flex;align-items:center;padding:0 16px}
+  main .hero>nav .brand-logo,.full-destination-nav .destination-brand img{width:58px;height:58px}
+  main .hero>nav .header-brand-tagline,.full-destination-nav .destination-brand span,main .hero>nav .nav-links,.full-destination-nav .nav-links{display:none}
+  main .hero>nav .main-menu,.full-destination-nav .main-menu{margin:0 0 0 auto;padding:0}
+  body:has(.hero) .global-language-switcher,body:has(.destination-page) .global-language-switcher{top:26px!important;left:50%!important;right:auto!important;transform:translateX(-50%)!important}
+  .hero{padding-top:82px}.destination-page{padding-top:82px}
+}
