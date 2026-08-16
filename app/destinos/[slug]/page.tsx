@@ -33,5 +33,6 @@ export default async function DestinationPage({ params }: Props) {
     <section className="destination-gallery"><p className="destination-kicker">Imágenes del destino</p><h2>Conoce la experiencia.</h2><div>{detail.gallery.map((image,index)=><img key={image} src={image} alt={`${destination.title} - vista ${index+1}`} loading="lazy"/>)}</div></section>
     <section className="destination-bottom"><h2>¿Listo para conocer {destination.title}?</h2><p>Cuéntanos cuántas personas viajan y la fecha que tienes en mente.</p><a href={quote} target="_blank" rel="noreferrer"><WhatsAppIcon/> Hablar por WhatsApp</a></section>
     <SiteFooter/>
+    <a className="whatsapp-float" href={quote} target="_blank" rel="noreferrer" aria-label={`Cotizar por WhatsApp un viaje a ${destination.title}`}><img src="/whatsapp.svg" alt="" aria-hidden="true"/></a>
   </main>;
 }

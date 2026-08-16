@@ -29,5 +29,6 @@ export default async function DestinationPageEn({ params }: Props) {
     <section className="destination-gallery"><p className="destination-kicker">Destination images</p><h2>Discover the experience.</h2><div>{detail.gallery.map((image,index)=><img key={image} src={image} alt={`${d.title} - view ${index+1}`} loading="lazy"/>)}</div></section>
     <section className="destination-bottom"><h2>Ready to discover {d.title}?</h2><p>Tell us your group size and preferred date.</p><a href={quote}><WhatsAppIcon/> Chat on WhatsApp</a></section>
     <SiteFooter locale="en"/>
+    <a className="whatsapp-float" href={quote} target="_blank" rel="noreferrer" aria-label={`Request a WhatsApp quote for ${d.title}`}><img src="/whatsapp.svg" alt="" aria-hidden="true"/></a>
   </main>;
 }
