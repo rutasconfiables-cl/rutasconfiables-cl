@@ -51,7 +51,17 @@ export default function MainMenu({ locale = "es" }: { locale?: Locale }) {
       <span></span><span></span><span></span>
     </button>
     <div className="menu-panel">{groups.map((group) =>
-      <details className="menu-group" key={group.key} onToggle={(event) => keepOneOpen(event.currentTarget)}>
+      <details
+        className="menu-group"
+        key={group.key}
+        onToggle={(event) => keepOneOpen(event.currentTarget)}
+        onPointerEnter={(event) => {
+          if (window.matchMedia("(min-width: 851px) and (hover: hover)").matches) event.currentTarget.open = true;
+        }}
+        onPointerLeave={(event) => {
+          if (window.matchMedia("(min-width: 851px) and (hover: hover)").matches) event.currentTarget.open = false;
+        }}
+      >
         <summary>{labels[locale][group.key]}</summary>
         <div className="menu-dropdown">{group.items.map((title) =>
           <Link key={title} href={`${base}/destinos/${destinationSlug(title)}`} onClick={(event) => { event.currentTarget.closest("details")?.removeAttribute("open"); setMobileOpen(false); }}>{title === "Tours personalizados" ? labels[locale].custom : title}</Link>
