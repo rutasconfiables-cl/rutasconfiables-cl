@@ -16,3 +16,4 @@ main{padding-bottom:0}.hero{padding-top:120px}.hero nav{position:fixed;inset:0 0
 @media(max-width:600px){.whatsapp-float{display:grid!important;visibility:visible!important;opacity:1!important;right:16px;bottom:max(18px,env(safe-area-inset-bottom));width:60px;height:60px;z-index:2147483000}.whatsapp-float img{width:34px;height:34px}}
 .language-link{display:grid;place-items:center;min-width:34px;height:34px;border:1px solid rgba(255,255,255,.65);border-radius:999px;font-size:12px;font-weight:900;letter-spacing:.5px;transition:.2s}.language-link:hover{background:#fff;color:#061c4e}@media(max-width:600px){.language-link{min-width:32px;height:32px;margin-right:4px}.nav-links{gap:7px}}
 .destination-actions{display:flex;align-items:center;gap:18px}
+.language-group{display:flex;align-items:center;gap:6px}@media(max-width:600px){.language-group{gap:3px}.language-group .language-link{margin:0;min-width:29px;width:29px;height:29px;font-size:10px}}
