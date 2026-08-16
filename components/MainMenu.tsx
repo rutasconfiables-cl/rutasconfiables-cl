@@ -52,7 +52,7 @@ export default function MainMenu({ locale = "es" }: { locale?: Locale }) {
     </button>
     <div className="menu-panel">{groups.map((group) =>
       <details className="menu-group" key={group.key} onToggle={(event) => keepOneOpen(event.currentTarget)}>
-        <summary>{labels[locale][group.key]} <span aria-hidden="true">⌄</span></summary>
+        <summary>{labels[locale][group.key]}</summary>
         <div className="menu-dropdown">{group.items.map((title) =>
           <Link key={title} href={`${base}/destinos/${destinationSlug(title)}`} onClick={(event) => { event.currentTarget.closest("details")?.removeAttribute("open"); setMobileOpen(false); }}>{title === "Tours personalizados" ? labels[locale].custom : title}</Link>
         )}</div>
