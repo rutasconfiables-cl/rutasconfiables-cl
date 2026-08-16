@@ -16,7 +16,11 @@ const labels = {
   pt: { snow: "Neve", wine: "Vinícolas", beach: "Praia", tours: "Passeios", custom: "Passeios personalizados" },
   en: { snow: "Snow", wine: "Wineries", beach: "Beach", tours: "Tours", custom: "Custom tours" },
 };
-const menuLabels = { es: "Abrir menú", pt: "Abrir menu", en: "Open menu" };
+const menuLabels = {
+  es: { open: "Abrir menú", close: "Cerrar menú" },
+  pt: { open: "Abrir menu", close: "Fechar menu" },
+  en: { open: "Open menu", close: "Close menu" },
+};
 
 export default function MainMenu({ locale = "es" }: { locale?: Locale }) {
   const menuRef = useRef<HTMLDivElement>(null);
@@ -41,13 +45,20 @@ export default function MainMenu({ locale = "es" }: { locale?: Locale }) {
     };
   }, []);
 
+  useEffect(() => {
+    if (!mobileOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => { document.body.style.overflow = previousOverflow; };
+  }, [mobileOpen]);
+
   const keepOneOpen = (current: HTMLDetailsElement) => {
     if (!current.open) return;
     menuRef.current?.querySelectorAll<HTMLDetailsElement>("details[open]").forEach((item) => { if (item !== current) item.open = false; });
   };
 
   return <div className={`main-menu${mobileOpen ? " mobile-open" : ""}`} role="navigation" aria-label="Destinos" ref={menuRef}>
-    <button className="menu-toggle" type="button" aria-label={menuLabels[locale]} aria-expanded={mobileOpen} onClick={() => setMobileOpen((open) => !open)}>
+    <button className="menu-toggle" type="button" aria-label={mobileOpen ? menuLabels[locale].close : menuLabels[locale].open} aria-expanded={mobileOpen} onClick={() => setMobileOpen((open) => !open)}>
       <span></span><span></span><span></span>
     </button>
     <div className="menu-panel">{groups.map((group) =>
