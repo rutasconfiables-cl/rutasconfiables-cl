@@ -15,8 +15,8 @@ const trips = [
   {title:"Viña Concha y Toro",img:vineyard},
   {title:"Viña Alyan",img:vineyard},
   {title:"Viña Vik",img:vineyard},
-  {title:"Parque Safari",img:lion},
   {title:"Viña Santa Rita",img:vineyard},
+  {title:"Parque Safari",img:lion},
   {title:"Viña del Mar & Valparaíso",img:coast},
   {title:"Algarrobo & Isla Negra",img:coast},
   {title:"Tours personalizados",img:mountain}
