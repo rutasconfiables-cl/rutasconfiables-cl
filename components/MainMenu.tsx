@@ -1,0 +1,6 @@
+import Link from "next/link";
+import { destinationSlug } from "@/lib/destinations";
+type Locale="es"|"pt"|"en";
+const groups=[{key:"snow",items:["Snow Park Farellones","Valle Nevado","El Colorado","La Parva","Portillo & Laguna del Inca","Cajón del Maipo","Embalse del Yeso","Termas de Colina"]},{key:"wine",items:["Viña Concha y Toro","Viña Alyan","Viña Vik","Viña Santa Rita"]},{key:"beach",items:["Viña del Mar & Valparaíso","Algarrobo & Isla Negra"]},{key:"tours",items:["Parque Safari","Tours personalizados"]}] as const;
+const labels={es:{snow:"Nieve",wine:"Viñas",beach:"Playa",tours:"Tours",custom:"Tours personalizados"},pt:{snow:"Neve",wine:"Vinícolas",beach:"Praia",tours:"Passeios",custom:"Passeios personalizados"},en:{snow:"Snow",wine:"Wineries",beach:"Beach",tours:"Tours",custom:"Custom tours"}};
+export default function MainMenu({locale="es"}:{locale?:Locale}){const base=locale==="es"?"":`/${locale}`;return <div className="main-menu" role="navigation" aria-label="Destinos">{groups.map(group=><details className="menu-group" key={group.key}><summary>{labels[locale][group.key]} <span aria-hidden="true">⌄</span></summary><div className="menu-dropdown">{group.items.map(title=><Link key={title} href={`${base}/destinos/${destinationSlug(title)}`}>{title==="Tours personalizados"?labels[locale].custom:title}</Link>)}</div></details>)}</div>}
