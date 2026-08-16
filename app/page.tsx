@@ -16,9 +16,9 @@ const trips = [
   {title:"Viña Alyan",img:vineyard},
   {title:"Viña Vik",img:vineyard},
   {title:"Viña Santa Rita",img:vineyard},
-  {title:"Parque Safari",img:lion},
   {title:"Viña del Mar & Valparaíso",img:coast},
   {title:"Algarrobo & Isla Negra",img:coast},
+  {title:"Parque Safari",img:lion},
   {title:"Tours personalizados",img:mountain}
 ];
 const whatsapp = "https://wa.me/56935709244?text=Hola%2C%20quiero%20cotizar%20un%20viaje";
